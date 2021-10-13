@@ -4,10 +4,10 @@ const util = require("util");
 const dbProp = require("../prop/db.json");
 
 var pool = mysql.createPool({
-  host: dbProp.host,
-  user: dbProp.username,
-  password: dbProp.password,
-  database: dbProp.databasename,
+  host: process.env.DATABASE_HOST || dbProp.host,
+  user: process.env.DATABASE_USERNAME || dbProp.username,
+  password: process.env.DATABASE_PASSWORD || dbProp.password,
+  database: process.env.DATABASE_NAME || dbProp.databasename,
 });
 
 // Ping database to check for common exception errors.
