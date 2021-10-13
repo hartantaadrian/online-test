@@ -57,12 +57,14 @@ $ npm test
 ```
 
 the api available with paths below:
-  -http://localhost:1202/movies/search
-  -http://localhost:1202/movies/detail/:movieid
-
+```bash
+  http://localhost:1202/movies/search
+  http://localhost:1202/movies/detail/:movieid
+```
 the api require headers below:
-  -appkey : d964b97b
-
+```bash
+  appkey : d964b97b
+```
 ## Deployed apps
 The deployed app can be access with base path https://movieomdb.herokuapp.com/.
 
