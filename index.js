@@ -20,6 +20,6 @@ app.use((error, req, res, next) => {
   res.json({ message: error.message || "An error occured on server!!" });
 });
 
-app.listen(1202);
+app.listen(process.env.PORT || 5000);
 
 module.exports = app;
