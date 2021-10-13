@@ -9,10 +9,10 @@ Installation is done using the
 $ npm install express
 ```
 
-Create a new datebase with bibit as databsename on mysql
+Create a new database  on mysql
 
 Run sql script below:
--- Dumping structure for table bibit.request_log
+
 CREATE TABLE IF NOT EXISTS `request_log` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `request_date` datetime DEFAULT NULL,
@@ -23,16 +23,17 @@ CREATE TABLE IF NOT EXISTS `request_log` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=101 DEFAULT CHARSET=latin1;
 
--- Data exporting was unselected.
 
--- Dumping structure for table bibit.user
 CREATE TABLE IF NOT EXISTS `user` (
   `id` int(11) DEFAULT NULL,
   `username` varchar(255) DEFAULT NULL,
   `parent` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
-
+INSERT INTO `user` (`id`, `username`, `parent`) VALUES
+	(1, 'Ali', 2),
+	(2, 'Budi', 0),
+	(3, 'Cecep', 1);
 ## Number 1
 For Number 1 test answer it can be see on no1.sql file.
 It can be run by copy the script to mysql editor
