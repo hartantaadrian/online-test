@@ -34,25 +34,38 @@ INSERT INTO `user` (`id`, `username`, `parent`) VALUES
 	(1, 'Ali', 2),
 	(2, 'Budi', 0),
 	(3, 'Cecep', 1);
+
 ## Number 1
 For Number 1 test answer it can be see on no1.sql file.
 It can be run by copy the script to mysql editor
 
 ## Number 2
-make sure you are already do the installation step.
+Make sure you are already do the installation step.
 
 To start the server:
 
 ```bash
 $ npm start
 ```
-
+the server will be start on port 1202, 
+the port can be configure on server.json file
 
 To start the unit test:
 
 ```bash
 $ npm test
 ```
+
+the api available with paths below:
+  -http://localhost:1202/movies/search
+  -http://localhost:1202/movies/detail/:movieid
+
+the api require headers below:
+  -appkey : d964b97b
+
+## Deployed apps
+The deployed app can be access with base path https://movieomdb.herokuapp.com/.
+
 
 ## Number 3
 For Number 3 test answer it can be see on no3.js file.

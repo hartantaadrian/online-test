@@ -1,12 +1,13 @@
-var mysql = require("mysql2");
+const mysql = require("mysql2");
+const util = require("util");
 
-var util = require("util");
+const dbProp = require("../prop/db.json");
 
 var pool = mysql.createPool({
-  host: "localhost",
-  user: "root",
-  password: "P@ssw0rd.1",
-  database: "bibit",
+  host: dbProp.host,
+  user: dbProp.username,
+  password: dbProp.password,
+  database: dbProp.databasename,
 });
 
 // Ping database to check for common exception errors.

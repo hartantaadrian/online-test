@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const serverProp = require("./prop/server.json");
 
 const movieRoute = require("./routes/movies");
 
@@ -19,7 +20,7 @@ app.use((error, req, res, next) => {
   res.status(error.code || 500);
   res.json({ message: error.message || "An error occured on server!!" });
 });
-
-app.listen(process.env.PORT || 5000);
-
+const port = process.env.PORT || serverProp.port;
+app.listen(port);
+console.log(`server run on port ${process.env.PORT || serverProp.port}`);
 module.exports = app;
