@@ -2,8 +2,6 @@ const HttpError = require("../models/http-error");
 const pool = require("../connection/db");
 
 const insertLog = async (req) => {
-  console.log(new Date().toISOString());
-
   await pool.query(
     "INSERT INTO request_log (request_date,request_path,request_param,request_header,request_body)  VALUES(now(),?,?,?,?)",
     [
@@ -24,7 +22,7 @@ module.exports = async (req, res, next) => {
       return next(error);
     }
     req.key = key;
-    console.log(key);
+
     next();
   } catch (err) {
     console.log(err);
