@@ -2,18 +2,11 @@ var mysql = require("mysql2");
 
 var util = require("util");
 
-// var pool = mysql.createPool({
-//   host: "localhost",
-//   user: "root",
-//   password: "P@ssw0rd.1",
-//   database: "bibit",
-// });
-
 var pool = mysql.createPool({
-  host: "us-cdbr-east-04.cleardb.com",
-  user: "b5c81dec16d988",
-  password: "6916e208",
-  database: "heroku_49d27630e877873",
+  host: "localhost",
+  user: "root",
+  password: "P@ssw0rd.1",
+  database: "bibit",
 });
 
 // Ping database to check for common exception errors.
